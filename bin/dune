@@ -1,0 +1,5 @@
+(executable
+ (public_name branefrick)
+ (name main)
+ (libraries branefrick base core stdio)
+ (modes exe))

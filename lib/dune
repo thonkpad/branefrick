@@ -1,0 +1,3 @@
+(library
+ (name branefrick)
+ (libraries base angstrom stdio))
