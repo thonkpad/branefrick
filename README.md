@@ -1,5 +1,7 @@
 # Branefrick
 
+![My reaction to my code](./meme.jpg "Branefrick")
+
 My attempt at writing a purely functional Brainfuck interpreter in OCaml
 using the zipper datastructure
 
