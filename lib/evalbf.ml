@@ -26,7 +26,7 @@ let move direction tape =
   | Right, {left; focus; right= x :: xs} ->
       {left= focus :: left; focus= x; right= xs}
   | _ ->
-      failwith "What the fuck"
+      failwith "Error: invalid move"
 
 (* I think I like `move direction tape` more *)
 
@@ -62,9 +62,12 @@ let interpret cmds =
           | MoveRight ->
               move Right tape
           | Increment ->
-              {tape with focus= tape.focus + 1}
+              if tape.focus >= 255 then
+                failwith "Cell exceeds maximum memory (255)"
+              else {tape with focus= tape.focus + 1}
           | Decrement ->
-              {tape with focus= tape.focus - 1}
+              if tape.focus <= 0 then failwith "Cell byte cannot be < 0"
+              else {tape with focus= tape.focus - 1}
           | Output ->
               printf "%c" (Char.of_int_exn tape.focus) ;
               Out_channel.flush Out_channel.stdout ;
