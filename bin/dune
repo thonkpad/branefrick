@@ -1,5 +1,7 @@
 (executable
  (public_name branefrick)
  (name main)
- (libraries branefrick base core stdio)
+ (libraries branefrick base core core_unix.command_unix stdio)
+ (preprocess
+  (pps ppx_jane))
  (modes exe))

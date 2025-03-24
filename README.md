@@ -7,6 +7,6 @@ using the zipper datastructure
 
 ## TODO:
 
-- Implement a commandline program
+- ~~Implement a commandline program~~ ***DONE as of 3/24/2025**
 - Maybe make the code cleaner 
 - Write tests to prove that this works

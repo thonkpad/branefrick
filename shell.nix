@@ -16,5 +16,12 @@ in mkShell {
     ocamlformat
   ];
 
-  buildInputs = with ocamlPackages; [ angstrom base core stdio ];
+  buildInputs = with ocamlPackages; [
+    angstrom
+    base
+    core
+    core_unix
+    stdio
+    ppx_jane
+  ];
 }
