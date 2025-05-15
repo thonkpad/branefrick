@@ -11,7 +11,7 @@ let of_list l =
   | x :: xs ->
       {left= []; focus= x; right= xs}
 
-let of_zipper z = List.rev z.left @ (z.focus :: z.right)
+let of_zipper z = List.rev_append z.left (z.focus :: z.right)
 
 type direction = Left | Right
 
